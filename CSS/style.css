@@ -1,43 +1,41 @@
 body{
-    background-color:#2D3032;
+    background-color: #2D3032;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
     color: #D2D3D3;
-    font: normal 16 px arial, helvetica, sans-serif;
-    line-height: 1.6em;
-    margin 0
 }
 
-.container{
-    width: 90%;
-    float: center;
-    margin:auto;
+/*Global Elements*/
+.wrapper{
+    margin: auto;
+    padding: 0;
+    border: 0;
+    text-align: center;
 }
 
-.side-bar{
+/*Sidebar Elements*/
+.sidebar{
     background-color: #2D283E;
-    width: 15%;
-    float:left;
-    margin: none;
-    padding: none;
-    border: none;
-    position: fixed;       
+    width: 20%;
+    float: left;
 }
 
 #portrait{
-    background-image: url(../images/portrait.jpg);
-    background-size: cover;
-    background-position: fixed;
-
+    background: url('./Images/portrait.jpg'), no-repeat;
 }
 
-#pages{
-    list-style: none;
-    text-align: center;
+#nav.li{
     text-decoration: none;
-
+    font-size: 16;
 }
 
-#charlie{
-    background-image: url(../Images/Charlie.jpg);
-    background-size: cover;
-    background-position: fixed;
+/*Main Section Elements*/
+.main{
+    width: 80%;
+    float: right;
 }
+
