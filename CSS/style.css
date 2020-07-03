@@ -25,7 +25,11 @@ body{
 }
 
 #portrait{
-    background: url('./Images/portrait.jpg'), no-repeat;
+    background: url('../Images/portrait.jpg') no-repeat center;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    
 }
 
 #nav.li{
