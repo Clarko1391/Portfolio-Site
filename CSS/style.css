@@ -5,7 +5,6 @@ body{
     border: 0px;
     
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
     color: #D2D3D3;
 }
 
@@ -17,29 +16,160 @@ body{
     text-align: center;
 }
 
-/*Sidebar Elements*/
-.sidebar{
-    background-color: #2D283E;
-    width: 20%;
-    float: left;
+ul{
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
 }
 
-#portrait{
-    background: url('../Images/portrait.jpg') no-repeat center;
-    background-size: contain;
-    width: 150px;
-    height: 150px;
+li{
+    text-decoration: none;
     
 }
 
-#nav.li{
+a{
     text-decoration: none;
-    font-size: 16;
+    color: #D2D3D3;
+    font-size: 18px;
+    line-height: 1.6em;
+    
+}
+
+/*Sidebar Elements*/
+.sidebar{
+    background-color: #2D283E;
+    width: 250px;
+    height: 100%;
+    float: left;
+    position: fixed;
+    
+}
+
+#portrait{
+    background: url('../img/portrait.jpg') no-repeat center;
+    background-size: contain;
+    width: 150px;
+    height: 150px; 
+    margin: auto;
+
+}
+
+.socialicons{
+    margin: 20px;
+    width: 200px;
+    height:80px;
+    
+}
+
+#Linkedin{
+    background: url(../img/Linkedinnbg.png) no-repeat center;
+    background-size: contain;
+    width: 25%;
+    height: 90%;
+    display: inline-block;
+}
+
+#Stackoverflow{
+    background: url(../img/stackOverflownbg.png) no-repeat center;
+    background-size: contain;
+    width: 25%;
+    height: 90%;
+    display: inline-block;
+}
+
+#Github{
+    background: url(../img/Githubnbg.png) no-repeat center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 90%;
+    display: inline-block;
 }
 
 /*Main Section Elements*/
 .main{
     width: 80%;
+    min-width: 960px;
     float: right;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.box-1{
+    width: 50%;
+    z-index: 1;
+    float: left;
+    text-align: left;
+
+}
+
+.box-2{
+    z-index: 1;
+    width: 50%;
+    height: auto;
+    float: right;
+}
+
+#charlie{
+    width: 400px;
+    height: 400px;
+    background: url(../img/Charlie.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.box-3{
+    float: left;
+    width: 100%;
+    z-index: 2;
+    text-align: left;
+}
+
+.clr{
+    clear: both;
+}
+
+.skills-top{
+    z-index: 3;
+    width: 100%;
+    float: center;
+}
+
+#sb1{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 45%;
+    
+}
+
+#sb2{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 45%;
+}
+
+
+#sb3{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 45%;
+}
+
+#sb4{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 45%;
+
+}
+
+/*Footer Elements*/
+.footer{
+    float: center;
+    margin: auto;
+    z-index: 2;
 }
 
