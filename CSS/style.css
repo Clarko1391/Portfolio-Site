@@ -1,8 +1,8 @@
 body{
     background-color: #2D3032;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+    margin: none;
+    padding: none;
+    border: none;
     
     font-family: Arial, Helvetica, sans-serif;
     color: #D2D3D3;
@@ -10,9 +10,9 @@ body{
 
 /*Global Elements*/
 .wrapper{
-    margin: auto;
-    padding: 0;
-    border: 0;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
     text-align: center;
 }
 
@@ -35,6 +35,10 @@ a{
     
 }
 
+h1{
+    color: #802BB1;
+}
+
 /*Sidebar Elements*/
 .sidebar{
     background-color: #2D283E;
@@ -42,48 +46,43 @@ a{
     height: 100%;
     float: left;
     position: fixed;
-    
 }
 
 #portrait{
-    background: url('../img/portrait.jpg') no-repeat center;
+    background: url('../img/portrait.png') no-repeat center;
     background-size: contain;
-    width: 150px;
-    height: 150px; 
-    margin: auto;
-
+    width: 200px;
+    height: 200px;
+    margin: 25px;
 }
 
-.socialicons{
-    margin: 20px;
+.socialIcons{
+    padding: 25px;
     width: 200px;
     height:80px;
-    
+    display: inline-flex;
+    justify-content: center;
 }
 
-#Linkedin{
-    background: url(../img/Linkedinnbg.png) no-repeat center;
+#linkedIn{
     background-size: contain;
-    width: 25%;
-    height: 90%;
-    display: inline-block;
+    width: 15%;
+    height: auto;
+    margin: 10px;   
 }
 
-#Stackoverflow{
-    background: url(../img/stackOverflownbg.png) no-repeat center;
+#stackOverflow{
     background-size: contain;
-    width: 25%;
-    height: 90%;
-    display: inline-block;
+    width: 15%;
+    height: auto;
+    margin: 10px;
 }
 
-#Github{
-    background: url(../img/Githubnbg.png) no-repeat center;
+#gitHub{
     background-size: contain;
-    background-repeat: no-repeat;
-    width: 25%;
-    height: 90%;
-    display: inline-block;
+    width: 15%;
+    height: auto;
+    margin:10px;
 }
 
 /*Main Section Elements*/
@@ -114,8 +113,9 @@ a{
 #charlie{
     width: 400px;
     height: 400px;
-    background: url(../img/Charlie.jpg) no-repeat center;
+    background: url(../img/Charliecrop.jpg) no-repeat center;
     background-size: contain;
+    margin: auto;
 }
 
 .box-3{
@@ -139,7 +139,7 @@ a{
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 45%;
+    width: 49.75%;
     
 }
 
@@ -147,7 +147,7 @@ a{
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 45%;
+    width: 49.75%;
 }
 
 
@@ -155,14 +155,14 @@ a{
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 45%;
+    width: 49.75%;
 }
 
 #sb4{
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 45%;
+    width: 49.75%;
 
 }
 
