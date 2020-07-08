@@ -1,9 +1,8 @@
 body{
     background-color: #2D3032;
-    margin: none;
-    padding: none;
-    border: none;
-    
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
     font-family: Arial, Helvetica, sans-serif;
     color: #D2D3D3;
 }
@@ -56,6 +55,13 @@ h3{
     text-transform: uppercase;
 }
 
+h4{
+    color: #d1d7e0;
+    width: 60%;
+    float: center;
+    margin: 20px auto 10px auto;
+}
+
 /*Sidebar Elements*/
 .sidebar{
     background-color: #2D283E;
@@ -63,22 +69,35 @@ h3{
     height: 100%;
     float: left;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
 }
 
 #portrait{
     background: url('../img/portrait.png') no-repeat center;
     background-size: contain;
-    width: 200px;
-    height: 200px;
-    margin: 25px;
+    width: 150px;
+    height: 150px;
+    margin: 50px auto 50px auto;
+
+}
+
+#intro{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .socialIcons{
     padding: 25px;
     width: 200px;
-    height:80px;
-    display: inline-flex;
+    height:50px;
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
+    align-content: center;
 }
 
 #linkedIn{
@@ -101,6 +120,37 @@ h3{
     height: auto;
     margin:10px;
 }
+
+#contactForm{
+    /*display: none;*/
+}
+
+.fb{
+    background-color: #2D283E;
+    color: #D2D3D3;
+    margin: 5px;
+    border:2px solid #d1d7e0;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80%;
+}
+
+.textarea{
+    resize: none;
+    overflow: auto;
+    height: 150px;
+}
+
+#submit{
+    margin: 10px auto 30px auto;
+    padding: 5px 10px 5px 10px;
+    background-color:  #2D283E;
+    border:2px solid #d1d7e0;
+    border-radius: 5px;
+    color: #D2D3D3;
+    
+}
+
 
 /*Main Section Elements*/
 .main{
