@@ -1,81 +1,88 @@
-body{
-    background-color: #2D3032;
+/* CSS Variables */
+:root {
+    --primary: #2D3032;
+    --accent: #2D283E;
+    --regtext: #D2D3D3;
+    --htext: #d1d7e0;
+}
+
+body {
+    background-color: var(--primary);
     margin: 0px;
     padding: 0px;
     border: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #D2D3D3;
+    color: var(--regtext);
 }
+
+/* .main-container { 
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 10fr;
+}*/
 
 /*Global Elements*/
-.wrapper{
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    text-align: center;
-}
-
-ul{
+ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
 }
 
-li{
+li {
     text-decoration: none;
     
 }
 
-a{
+a {
     text-decoration: none;
-    color: #D2D3D3;
+    color: var(--regtext);
     font-size: 18px;
     line-height: 1.6em;
     
 }
 
-h1{
-    color: #d1d7e0;
+h1 {
+    color: var(--htext);
     font-size: xx-large;
     margin: 10px 0px 10px 0px;
     font-weight: bolder;
 }
 
-h2{
+h2 {
     margin: 0px;
     padding: 0px;
     font-size: larger;
-    color: #d1d7e0;
+    color: var(--htext);
     text-transform: uppercase;
     font-weight: bold;
 }
 
-h3{
+h3 {
     font-size: large;
     text-transform: uppercase;
 }
 
-h4{
-    color: #d1d7e0;
+h4 {
+    color: var(--htext);
     width: 60%;
     float: center;
     margin: 20px auto 10px auto;
 }
 
 /*Sidebar Elements*/
-.sidebar{
-    background-color: #2D283E;
-    width: 250px;
-    height: 100%;
-    float: left;
-    position: fixed;
+.sidebar {
+    background: var(--accent);
+    width: 20vw;
+    min-width: 300px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
+    position: fixed;
 }
 
-#portrait{
+#portrait {
     background: url('../img/portrait.png') no-repeat center;
     background-size: contain;
     width: 150px;
@@ -84,13 +91,13 @@ h4{
 
 }
 
-#intro{
+#intro {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.socialIcons{
+.socialIcons {
     padding: 25px;
     width: 200px;
     height:50px;
@@ -100,116 +107,105 @@ h4{
     align-content: center;
 }
 
-#linkedIn{
+#linkedIn {
     background-size: contain;
     width: 15%;
     height: auto;
     margin: 10px;   
 }
 
-#stackOverflow{
+#stackOverflow {
     background-size: contain;
     width: 15%;
     height: auto;
     margin: 10px;
 }
 
-#gitHub{
+#gitHub {
     background-size: contain;
     width: 15%;
     height: auto;
     margin:10px;
 }
 
-#contactForm{
+#contactForm {
     display: none;
 }
 
-.fb{
-    background-color: #2D283E;
-    color: #D2D3D3;
+.fb {
+    background-color: var(--accent);
+    color: var(--regtext);
     margin: 5px;
-    border:2px solid #d1d7e0;
+    border:2px solid var(--htext);
     border-radius: 5px;
     padding: 5px;
     width: 80%;
 }
 
-.textarea{
+.textarea {
     resize: none;
     overflow: auto;
     height: 150px;
 }
 
-#submit{
+#submit {
     margin: 10px auto 30px auto;
     padding: 5px 10px 5px 10px;
-    background-color:  #2D283E;
-    border:2px solid #d1d7e0;
+    background-color: var(--accent);
+    border:2px solid var(--htext);
     border-radius: 5px;
-    color: #D2D3D3;
+    color: var(--regtext);
     
 }
 
 
 /*Main Section Elements*/
-.main{
-    width: 80%;
-    min-width: 960px;
-    float: right;
-    z-index: 1;
-    overflow: hidden;
+.wrapper {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 20vw auto;
+    grid-gap: 20px; 
+      
+}
+
+.main {
+    grid-column-start: 2;
+    width: 70%;
+    min-width: 300px;
+    margin: 50px auto 0px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 'box-1 box-1 box-2 box-2 box-2''box-3 box-3 box-3 box-3 box-3';
 
 }
 
-.box-1{
-    width: 40%;
-    z-index: 1;
-    float: left;
-    text-align: left;
-    padding-top: 30px;
+.box-1 {
+    grid-area: box-1;
 }
 
-.box-2{
-    z-index: 1;
-    width: 50%;
-    height: auto;
-    float: right;
+.box-2 {
+    grid-area: box-2;
 }
 
-#charlie{
+#charlie {
     width: 600px;
     height: 300px;
     background: url(../img/Charliecrop.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
     margin: auto;
 }
 
-.box-3{
-    float: left;
-    width: 90%;
-    z-index: 2;
-    text-align: left;
-    padding: 30px 0px 30px 0px;
+.box-3 {
+    grid-area: box-3;
 }
 
-.clr{
-    clear: both;
-}
-
-.skills{
-    z-index: 3;
+.skills {
+    grid-column-start: 2;
     width: 100%;
-    text-align: center;
+    text-align:center;
 }
 
-.flexContainer{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
-
-#sb1{
+#sb1 {
     order: 1;
     width: 45%;
     min-height: 350px;
@@ -220,47 +216,16 @@ h4{
     justify-content: center;         
 }
 
-#sb2{
-    order: 2;
-    width: 45%;
-    min-height: 350px;
-    background: url(../img/Skills2.png) no-repeat center;
-    background-size: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-}
-
-#sb3{
-    order: 3;
-    width: 45%;
-    min-height: 350px;
-    background: url(../img/Skills3.png) no-repeat center;
-    background-size: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   
-}
-
-#sb4{
-    order: 4;
-    width: 45%;
-    min-height: 350px;
-    background: url(../img/Skills4.png) no-repeat center;
-    background-size: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   
-}
 
 /*Footer Elements*/
-.footer{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    }
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
 
-#copyright{
+}
+
+#copyright {
     width: 250;
     height: 50;
     text-align: center;
