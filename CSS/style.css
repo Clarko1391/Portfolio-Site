@@ -28,18 +28,6 @@ ul {
     padding: 0;
 }
 
-li {
-    text-decoration: none;
-    
-}
-
-a {
-    text-decoration: none;
-    color: var(--regtext);
-    font-size: 18px;
-    line-height: 1.6em;
-    
-}
 
 h1 {
     color: var(--htext);
@@ -72,13 +60,13 @@ h4 {
 /*Sidebar Elements*/
 .sidebar {
     background: var(--accent);
-    width: 20vw;
-    min-width: 300px;
+    width: 300px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    text-align: center;
     position: fixed;
 }
 
@@ -87,8 +75,7 @@ h4 {
     background-size: contain;
     width: 150px;
     height: 150px;
-    margin: 50px auto 50px auto;
-
+    margin: 20px auto;
 }
 
 #intro {
@@ -98,8 +85,8 @@ h4 {
 }
 
 .socialIcons {
-    padding: 25px;
-    width: 200px;
+    margin: 10px auto;
+    width: 150px;
     height:50px;
     display: flex;
     flex-flow: row nowrap;
@@ -111,28 +98,46 @@ h4 {
     background-size: contain;
     width: 15%;
     height: auto;
-    margin: 10px;   
+    margin: auto
 }
 
 #stackOverflow {
     background-size: contain;
     width: 15%;
     height: auto;
-    margin: 10px;
+    margin: auto
 }
 
 #gitHub {
     background-size: contain;
     width: 15%;
     height: auto;
-    margin:10px;
+    margin: auto 
+}
+
+#nav {
+    margin: 20px auto;
+}
+
+#nav button {
+    text-decoration: none;
+    background-color: var(--accent);
+    border: 2px var(--accent) solid;
+    border-radius: 2px;
+    color: var(--regtext);
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+#nav button:hover {
+    font-size: 1.2rem;
 }
 
 #contactForm {
-    display: none;
+    /* display: none;*/
 }
 
-.fb {
+.fe {
     background-color: var(--accent);
     color: var(--regtext);
     margin: 5px;
@@ -163,15 +168,14 @@ h4 {
 .wrapper {
     width: 100vw;
     display: grid;
-    grid-template-columns: 20vw auto;
-    grid-gap: 20px; 
+    grid-template-columns: 300px auto;
+    grid-gap: 0px; 
       
 }
 
 .main {
     grid-column-start: 2;
-    width: 70%;
-    min-width: 300px;
+    width: 85%;
     margin: 50px auto 0px auto;
     display: grid;
     grid-gap: 20px;
@@ -185,11 +189,12 @@ h4 {
 
 .box-2 {
     grid-area: box-2;
+    min-width: 300px;
 }
 
 #charlie {
-    width: 600px;
     height: 300px;
+    width: 100%;
     background: url(../img/Charliecrop.jpg) no-repeat center;
     background-size: cover;
     margin: auto;
@@ -201,19 +206,45 @@ h4 {
 
 .skills {
     grid-column-start: 2;
-    width: 100%;
-    text-align:center;
+    width: 85%;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skillbox {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    background-size: contain;
 }
 
 #sb1 {
-    order: 1;
-    width: 45%;
-    min-height: 350px;
     background: url(../img/Skills1.png) no-repeat center;
-    background-size: 300px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;         
+           
+}
+
+#sb2 {
+    background: url(../img/Skills2.png) no-repeat center;       
+}
+
+#sb3 {
+    background: url(../img/Skills3.png) no-repeat center;         
+}
+
+#sb4 {
+    background: url(../img/Skills4.png) no-repeat center;         
+}
+
+#sb5 {
+    background: url(../img/Skills4.png) no-repeat center;         
+}
+
+#sb6 {
+    background: url(../img/Skills4.png) no-repeat center;       
 }
 
 
@@ -231,3 +262,5 @@ h4 {
     text-align: center;
 }
 
+/* Media Queries */
+@media()
