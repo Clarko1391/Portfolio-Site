@@ -1,9 +1,12 @@
 /* CSS Variables */
 :root {
-    --primary: #2D3032;
-    --accent: #2D283E;
-    --regtext: #D2D3D3;
+    --primary: #7D7F80;
+    --sidebar: #2D283E;
+    --regtext: #564F64;
     --htext: #d1d7e0;
+    --saveme: #2D3032;
+    --savemetoo: #D2D3D3;
+    --savemethree: #d1d7e0;
 }
 
 body {
@@ -61,7 +64,7 @@ h4 {
 
 /*Sidebar Elements*/
 .sidebar {
-    background: var(--accent);
+    background: var(--sidebar);
     width: 300px;
     height: 100vh;
     display: flex;
@@ -72,7 +75,7 @@ h4 {
 
 #sbwrapper {
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -129,8 +132,8 @@ h4 {
 
 #nav button {
     text-decoration: none;
-    background-color: var(--accent);
-    border: 2px var(--accent) solid;
+    background-color: var(--sidebar);
+    border: 2px var(--sidebar) solid;
     border-radius: 2px;
     color: var(--regtext);
     font-size: 1rem;
@@ -146,7 +149,7 @@ h4 {
 }
 
 .fe {
-    background-color: var(--accent);
+    background-color: var(--sidebar);
     color: var(--regtext);
     margin: 5px;
     border:2px solid var(--htext);
@@ -164,7 +167,7 @@ h4 {
 #submit {
     margin: 10px auto 30px auto;
     padding: 5px 10px 5px 10px;
-    background-color: var(--accent);
+    background-color: var(--sidebar);
     border:2px solid var(--htext);
     border-radius: 5px;
     color: var(--regtext);
@@ -187,7 +190,8 @@ h4 {
     margin: 50px auto 0px auto;
     display: grid;
     grid-gap: 20px;
-    grid-template-areas: 'box-1 box-1 box-2 box-2 box-2''box-3 box-3 box-3 box-3 box-3';
+    /* grid-template-areas: 'box-1 box-1 box-2 box-2 box-2''box-3 box-3 box-3 box-3 box-3'; */
+    grid-template-areas: 'box-1' 'box-2';
 }
 
 .box-1 {
@@ -199,10 +203,10 @@ h4 {
     min-width: 300px;
 }
 
-#charlie {
+/* #charlie { */
     height: 300px;
     width: 100%;
-    background: url(../img/Charliecrop.jpg) no-repeat center;
+    background: url(../img/Charlie.jpg) no-repeat center;
     background-size: cover;
     margin: auto;
 }
@@ -228,9 +232,14 @@ h4 {
     text-align: center;
     align-content: center;
     font-size: 1rem;
-    min-width: 250px;
-    min-height: 250px;
+    min-width: 150px;
+    min-height: 150px;
+    margin: 0px auto;
 
+}
+
+#sbtext {
+    padding: 50px;
 }
 
 #sb1 {
@@ -276,6 +285,7 @@ h4 {
 #copyright {
     width: 250;
     height: 50;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -291,7 +301,7 @@ h4 {
     }
 }
 
-@media(max-width: 1300px) {
+@media(max-width: 1100px) {
     .skills {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -301,7 +311,7 @@ h4 {
     }
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 750px) {
     .skills {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -348,11 +358,6 @@ h4 {
     }
     
     #sbwrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: center;
+        max-height: 900px;
     }
 }
