@@ -7,6 +7,7 @@
     --maintext: #2D3032;
     --mainhtext: #d1d7e0;
     --showcasebg: rgba(75, 79, 88, 0.6);
+    --shadow: rgba(45, 48, 50, 0.6);
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 
 /* .main-container { 
     display: grid;
-    grid-gap: 20px;
+    gap: 20px;
     grid-template-columns: 2fr 10fr;
 }*/
 
@@ -188,7 +189,7 @@ h4 {
     height: 50vh;
     margin:  25px auto 0px;
     display: grid;
-    grid-gap: 20px;
+    gap: 20px;
     grid-template-areas: 'box-1' 'box-2';
     align-content: space-between;
     background: url(../img/showcase.jpg) center no-repeat;
@@ -218,9 +219,9 @@ h4 {
 .skills {
     grid-column-start: 2;
     width: 95%;
-    margin: 50px auto;
+    margin: 50px auto 0px;
     display: grid;
-    grid-gap: 50px;
+    gap: 50px;
     grid-template-columns: repeat(6, 1fr);
     color: var(--mainhtext);
 }
@@ -273,15 +274,89 @@ h4 {
     background-size: contain;       
 }
 
+.portfolio {
+    grid-column-start: 2;
+    width: 95%;
+    margin: 50px auto;
+    display: grid;
+    gap: 20px;
+    color: var(--mainhtext);
+}
+
+#pheader {
+    background: var(--shadow);
+    padding: 20px 0px 20px 5px;
+}
+
+#pboxes {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.pbox {
+    background: var(--shadow);
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.pbox p {
+    margin: 0px auto;
+    font-size: 1.2rem;
+}
+
 .woodworking {
     grid-column-start: 2;
     width: 95%;
     margin: 50px auto;
     display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     color: var(--mainhtext);
+}
 
+#wwheader {
+    background: var(--shadow);
+    padding: 20px 0px 20px 5px;
+}
+
+#wwboxes {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#wwbox {
+    background: var(--shadow);
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+#wwbox p {
+    margin: 0px auto;
+}
+
+.odd {
+    justify-content: flex-start;
+}
+
+.even {
+    justify-content: flex-end;
+}
+
+#picbox {
+    max-height: 250px;
+    width: auto;
+    margin: 20px;
 }
 
 /*Footer Elements*/
@@ -297,6 +372,7 @@ h4 {
     height: 50;
     margin-bottom: 50px;
     text-align: center;
+    color: var(--sbhtext);
 }
 
 /* Media Queries */
@@ -318,10 +394,20 @@ h4 {
     
 }
 
+@media(max-width: 1100px) {
+    #wwboxes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+
+
 @media(max-width: 850px) {
     .skills {
         grid-template-columns: repeat(2, 1fr);
     }
+
     
 }
 
@@ -337,7 +423,7 @@ h4 {
         width: 100vw;
         display: grid;
         grid-template-columns: auto 0px;
-        grid-gap: 0px; 
+        gap: 0px; 
           
     }
 
@@ -347,6 +433,14 @@ h4 {
 
     .skills {
         grid-column-start: 1;       
+    }
+
+    .woodworking {
+        grid-column-start: 1;       
+    }
+
+    .portfolio {
+        grid-column-start: 1;
     }
 
 }
