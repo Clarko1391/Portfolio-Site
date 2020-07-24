@@ -44,7 +44,6 @@ h2 {
     margin: 0px;
     font-size: 1.5rem;
     color: var(--mainhtext);
-    text-transform: uppercase;
     font-weight: bold;
 }
 
@@ -185,6 +184,7 @@ h4 {
 
 .main {
     grid-column-start: 2;
+    min-width: 300px;
     width: 95%;
     height: 50vh;
     margin:  25px auto 0px;
@@ -415,14 +415,15 @@ h4 {
     .sidebar {
         grid-column-start: 1;
         width: 100vw;
-        margin: 0px auto 0px;
+        min-width: 300px;
+        margin: 0px;
         position: relative;
     }
 
     .wrapper {
         width: 100vw;
         display: grid;
-        grid-template-columns: auto 0px;
+        grid-template-columns: auto;
         gap: 0px; 
           
     }
